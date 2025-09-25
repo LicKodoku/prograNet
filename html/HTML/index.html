@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>CRUD</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='../CSS/CRUD.css'>
+    <link type="text/JavaScript" src='../JavaS/conexion.js'>
+
+</head>
+<body>
+    <script>
+        conexion.connect(function(error){
+    if(error){
+        throw error;
+        window.alert("Error");
+        conexion.end();
+    }else{
+        window.alert("conexion exitosa");
+        conexion.end();
+    }
+});
+    </script>
+    <h1>
+        CRUD ALUMNOS
+    </h1>
+    <div class="container1">
+        <form action="../JavaS/conexion.js" method="post">
+            <table>
+                <tr>
+                    <h2>REGISTRO</h2>
+                </tr>
+                <tr>
+                    <td><h4>Numero de Cuenta</h4></td><td><input type="text" id="num_cuenta" name="num_cuenta" required></td>
+                </tr>   
+                <tr>
+                    <td><h4>Nombres del alumno</h4></td><td><input type="text" id="name" name="name" required></td>
+                </tr>
+                <tr>
+                    <td><h4>Apellidos del alumno</h4></td><td><input type="text" id="lastname" name="lastname" required></td>
+                </tr>
+                <tr>
+                    <td><h4>Calificacion del alumno</h4></td><td><input type="text" id="calif" name="calif" required></td>
+                </tr>
+                <tr style="border: 2px solid black;">
+                    
+                    <td style="border: 2px solid black;"><button onclick="insertar()">Enviar</button></td>
+                </tr>
+            </table>
+        </form>
+    </div>
+
+    <div class="container1">
+        <form>
+            <table>
+                <tr>
+                    <h2>Busqueda</h2>
+                </tr>
+                <tr>
+                    <td><h4>Numero de Cuenta</h4></td><td><input type="text" id="num_cuenta" name="num_cuenta" required></td>
+                </tr>   
+                <tr>
+                    <td><h4>Nombres del alumno</h4></td><td><input type="text" id="name" name="name" disabled></td>
+                </tr>
+                <tr>
+                    <td><h4>Apellidos del alumno</h4></td><td><input type="text" id="lastname" name="lastname" disabled></td>
+                </tr>
+                <tr>
+                    <td><h4>Calificacion del alumno</h4></td><td><input type="text" id="calif" name="calif"  disabled></td>
+                </tr>
+                <tr style="border: 2px solid black;">
+                    <td style="border: 2px solid black;"><button onclick="mostrar_datos()">Enviar</button></td>
+                </tr>
+                <script type="text/JavaScript">
+
+                </script>
+            </table>
+        </form>
+    </div>
+
+    <div class="container1">
+        <form>
+            <table>
+                <tr>
+                    <h2>ACTUALIZACION</h2>
+                </tr>
+                <tr>
+                    <td><h4>Numero de Cuenta</h4></td><td><input type="text" id="num_cuenta" name="num_cuenta" required></td>
+                </tr>   
+                <tr>
+                    <td><h4>Seleccione el area a actualizar</h4></td><td>
+                    Nombre<input type="radio" id="name" name="name" required>
+                    Apellidos<input type="radio" id="name" name="name" required>
+                    Calificacion<input type="radio" id="name" name="name" required></td>
+                </tr>
+                <tr>
+                    <td><h4>Nuevo dato</h4></td><td><input type="text" id="newDato" name="newDato" required></td>
+                </tr>
+                <tr style="border: 2px solid black;">
+                    <td style="border: 2px solid black;"><button onclick="mostrar_datos()">Enviar</button></td>
+                </tr>
+                <script type="text/JavaScript">
+
+                </script>
+            </table>
+        </form>
+    </div>
+
+    <div class="container1">
+        <form>
+            <table>
+                <tr>
+                    <h2>ELIMINAR</h2>
+                </tr>
+                <tr>
+                    <td><h4>Numero de Cuenta</h4></td><td><input type="text" id="num_cuenta" name="num_cuenta" required></td>
+                </tr>       
+                <tr style="border: 2px solid black;">
+                    <td style="border: 2px solid black;"><button onclick="mostrar_datos()">Enviar</button></td>
+                </tr>
+                <script type="text/JavaScript">
+
+                </script>
+            </table>
+        </form>
+    </div>
+</body>
+</html>

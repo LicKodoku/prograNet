@@ -1,0 +1,51 @@
+body{
+    background-color: coral;
+    margin: 0px;
+    padding: 0%;
+}
+h1{
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    text-align: center;
+}
+h2{
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    text-align: center;
+    font-size: 1.5rem;
+}
+h4{
+    margin: 20px;
+    font-size: .8rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.container1{
+    /*position: absolute;
+    left: calc(50vh-500px); 
+    z-index: 50;*/
+    display: inline-block;
+    margin: 15px;
+    border-radius: 20px;
+    width: 250px;
+    height: 450px;
+    border: 5px solid blueviolet;
+    background-color: gainsboro;
+}
+
+table{
+    width: 200px;
+    height: 200px;
+    margin: auto;
+}
+
+input{
+    height: 1.5rem;
+    width: 100px;
+    justify-content: start;
+    border-radius: .5rem;
+}
+
+button{
+    width: 100%;
+    padding: 2px;
+    font-size: 1rem;
+    justify-tracks: center;
+}
